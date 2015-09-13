@@ -14,12 +14,16 @@
  *= require_self
  */
 body{
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   background-image: url('stageBackground.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
+h3 {
+  margin: 0;
+}
+
 header {
   border: solid black 15px;
   border-radius: 5px;
@@ -28,13 +32,18 @@ header {
   margin-bottom: 10px;
   background: white;
 }
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
 
 #main-container {
   border: solid black 15px;
   border-radius: 5px;
   padding: 10px;
   background: white;
-  height: 600px;
+  max-height: 600px;
 }
 
 .cow {
@@ -46,15 +55,27 @@ header {
   width: 130px;
 }
 
-
-
 .cowImage{
   background-image: url('madCow.png');
   background-repeat: no-repeat;
   height: 100px;
   width: 110px;
 }
+.cowShotImage{
+  background-image: url('madShotCow.png');
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 160px;
+  display: inline-block;
+}
 
+.cowAttack {
+  margin: 3px;
+  padding: 7px;
+  background: #36BF5C;
+  width: 300px;
+  border: solid black 3px;
+}
 
 
 

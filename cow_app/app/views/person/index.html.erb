@@ -1,0 +1,16 @@
+<h2>Aproach these Cows with extreme caution!!!</h2>
+
+
+<% @people.each do |person| %>
+
+  <div class='person'>
+    <h2>WANTED</h2>
+    <div class='cowImage'>
+    </div>
+    <p>Name: <%= link_to person.name, person %></p>
+    <p>Age: <%= person.age %></p>
+
+
+
+  </div>
+<% end %>

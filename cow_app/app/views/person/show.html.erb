@@ -1,17 +1,15 @@
 <h2>This cow is considered to be armed and extermely dangerous</h2>
 
-  <div class='showCow'>
-    <h2>WANTED</h2>
-    <div class='cowImage'>
-    </div>
-    <p>Name: <%= @cow.name %></p>
-    <p>Age: <%= @cow.age %></p>
+  <div class='showPerson'>
+    <h2>Victim ID: #<%= @person.id %></h2>
+    <p>Name: <%= @person.name %></p>
+    <p>Age: <%= @person.age %></p>
 
   </div>
 
 
 <div id='cowAttacks'>
-  <h2> This cow has had <%= @attacks.count%> reported attacks </h2>
+  <h2> This Person has has been attacked <%= @attacks.count%> times by cows.  </h2>
 
   <% @attacks.each do |attack| %>
     <% person = Person.find(attack.person_id) %>
@@ -22,7 +20,7 @@
         <li>--------------------------------</li>
         <li>Location: <%= attack.location %></li>
         <li>Rating: <%= attack.rating %></li>
-        <li>Person Involved: <%= link_to person.name, person %></li>
+        <li>Person Involved: <%= person.name %></li>
       </ul>
     </div>
   <% end %>
