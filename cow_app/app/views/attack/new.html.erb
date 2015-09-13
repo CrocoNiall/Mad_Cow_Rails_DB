@@ -1,5 +1,9 @@
 <%= form_for @attack, :url => { :action => "create" } do |form| %>
 
+  
+  <%= link_to 'Add a victim!', '/cow/new' %>
+  <%= link_to 'Add a Killer Cow!', '/person/new' %>
+
   <div class='cowImage'>
   </div>
   <div class="field">
