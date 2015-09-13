@@ -6,12 +6,30 @@ class PersonController < ApplicationController
     @people = Person.all
 
   end
-
-
   def show
     @title = 'Victim'
     @person = Person.find(params[:id])
     @attacks = Attack.where(person_id: @person.id)
     
+  end
+
+  def new
+    @person = Person.new
+    render :new
+  end
+
+  def create
+    person = Person.new(Person_params)
+    
+    if cow.save
+      redirect_to '/'
+    else
+      render :new
+    end
+  end
+
+  private
+  def person_params
+    params.require(:person).permit(:name, :age)
   end
 end

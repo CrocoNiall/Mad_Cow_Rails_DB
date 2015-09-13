@@ -23,7 +23,7 @@ class CowController < ApplicationController
     cow = Cow.new(cow_params)
     
     if cow.save
-      redirect_to cow_index
+      redirect_to '/'
     else
       render :new
     end

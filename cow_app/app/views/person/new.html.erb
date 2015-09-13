@@ -1,7 +1,5 @@
-<%= form_for @cow, :url => { :action => "create" } do |form| %>
-
-  <div class='cowImage'>
-  </div>
+<%= form_for @person, :url => { :action => "create" } do |form| %>
+  <h1>Add a victim to the database</h1>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
