@@ -12,7 +12,7 @@ class CowController < ApplicationController
     @title = 'Have you seen this Cow?'
     @cow = Cow.find(params[:id])
     @attacks = Attack.where(cow_id: @cow.id)
-    
+
   end
 
 

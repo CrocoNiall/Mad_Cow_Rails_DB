@@ -14,11 +14,12 @@
  *= require_self
  */
 body{
+  font-family: 'Candal', sans-serif;
   width: 60%;
   margin: 0 auto;
   background-image: url('stageBackground.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 h3 {
   margin: 0;
@@ -31,11 +32,18 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
   background: white;
+  text-align: center;
 }
+
+
 header h1 {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  font-size: 40px;
+}
+header h2{
+  font-size: 25px
 }
 
 #main-container {
@@ -43,7 +51,8 @@ header h1 {
   border-radius: 5px;
   padding: 10px;
   background: white;
-  max-height: 600px;
+  min-height: 500px;
+
 }
 
 .cow {
@@ -53,6 +62,8 @@ header h1 {
   border: solid black 8px;
   border-radius: 5px;
   width: 130px;
+  background-color: red;
+  text-align: center;
 }
 
 .cowImage{
