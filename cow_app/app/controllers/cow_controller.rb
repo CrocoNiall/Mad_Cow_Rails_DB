@@ -29,6 +29,11 @@ class CowController < ApplicationController
     end
   end
 
+  def destroy
+    cow = Cow.find(params[:id]).destroy
+
+    redirect_to '/cow'
+  end
 
   private
   def cow_params

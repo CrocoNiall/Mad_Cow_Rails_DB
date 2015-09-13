@@ -28,6 +28,12 @@ class PersonController < ApplicationController
     end
   end
 
+  def destroy
+    person = Person.find(params[:id]).destroy
+
+    redirect_to '/person'
+  end
+
   private
   def person_params
     params.require(:person).permit(:name, :age)

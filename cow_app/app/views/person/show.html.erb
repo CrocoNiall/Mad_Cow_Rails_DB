@@ -4,6 +4,7 @@
     <h2>Victim ID: #<%= @person.id %></h2>
     <p>Name: <%= @person.name %></p>
     <p>Age: <%= @person.age %></p>
+    <%= link_to 'Delete', @person, method: :delete, data: { confirm: "Are you sure?" } %>
 
   </div>
 
@@ -14,6 +15,7 @@
   <% @attacks.each do |attack| %>
     <% person = Person.find(attack.person_id) %>
     <% cow = Cow.find(attack.cow_id) %>
+
 
     <div class='cowAttack'>
       <ul>
