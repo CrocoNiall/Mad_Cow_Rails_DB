@@ -1,1 +1,16 @@
-<h2> this is the index for cow</h2>
+<h2>Aproach these Cows with extreme caution!!!</h2>
+
+
+<% @cows.each do |cow| %>
+
+  <div class='cow'>
+    <h2>WANTED</h2>
+    <div class='cowImage'>
+    </div>
+    <p>Name: <%= link_to cow.name, cow %></p>
+    <p>Age: <%= cow.age %></p>
+
+
+
+  </div>
+<% end %>

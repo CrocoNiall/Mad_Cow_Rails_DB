@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+body{
+  width: 70%;
+  margin: 0 auto;
+  background-image: url('stageBackground.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header {
+  border: solid black 15px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: white;
+}
+
+#main-container {
+  border: solid black 15px;
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
+  height: 600px;
+}
+
+.cow {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border: solid black 8px;
+  border-radius: 5px;
+  width: 130px;
+}
+
+
+
+.cowImage{
+  background-image: url('madCow.png');
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
