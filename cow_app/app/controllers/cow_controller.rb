@@ -29,6 +29,20 @@ class CowController < ApplicationController
     end
   end
 
+  def edit
+    @cow = Cow.find(params[:id])
+  end
+
+  def update
+    cow = Cow.find(params[:id])
+
+    if cow.update(cow_params)
+      redirect_to cow
+    else
+      render :edit
+    end
+  end
+
   def destroy
     cow = Cow.find(params[:id]).destroy
 

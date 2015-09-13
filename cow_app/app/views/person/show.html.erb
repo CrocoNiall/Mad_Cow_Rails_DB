@@ -5,7 +5,7 @@
     <p>Name: <%= @person.name %></p>
     <p>Age: <%= @person.age %></p>
     <%= link_to 'Delete', @person, method: :delete, data: { confirm: "Are you sure?" } %>
-
+    <%= link_to 'Edit', edit_person_path(@person) %>
   </div>
 
 
