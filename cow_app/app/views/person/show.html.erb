@@ -13,7 +13,7 @@
 
   <% @attacks.each do |attack| %>
     <% person = Person.find(attack.person_id) %>
-    <% cow = Person.find(attack.cow_id) %>
+    <% cow = Cow.find(attack.cow_id) %>
 
     <div class='cowAttack'>
       <ul>

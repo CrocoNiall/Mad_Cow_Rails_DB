@@ -1,0 +1,14 @@
+<%= form_for @cow, :url => { :action => "create" } do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+  <div class="action">
+    <%= form.submit 'New Article' %>
+  </div>
+
+<% end %>
