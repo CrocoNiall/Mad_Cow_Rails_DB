@@ -1,0 +1,35 @@
+<%= form_for @attack, :url => { :action => "create" } do |form| %>
+
+  <div class='cowImage'>
+  </div>
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+  <div class="field">
+    <%= form.radio_button :rating, '1', :checked => true %> 
+    <%= label :rating_1, '1' %>
+    <%= form.radio_button :rating, '2' %>
+    <%= label :rating_2, '2' %>
+    <%= form.radio_button :rating, '3' %>
+    <%= label :rating_3, '3' %>
+    <%= form.radio_button :rating, '4' %>
+    <%= label :rating_4, '4' %>
+    <%= form.radio_button :rating, '5' %>
+    <%= label :rating_5, '5' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :person_id %>
+    <%= form.collection_select(:person_id, Person.all, :id, :name ) %>
+
+  <div class="field">
+    <%= form.label :cow_id %>
+    <%= form.collection_select(:cow_id, Cow.all, :id, :name ) %>
+
+  </div>
+  <div class="action">
+    <%= form.submit 'Report Attack' %>
+  </div>
+
+<% end %>

@@ -118,6 +118,13 @@ header h2{
   text-align: center;
 }
 
+.field {
+  margin: 10px;
+}
+
+.action {
+  margin-top: 10px;
+}
 
 
 
