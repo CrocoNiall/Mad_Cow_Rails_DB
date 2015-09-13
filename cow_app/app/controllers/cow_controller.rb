@@ -11,8 +11,8 @@ class CowController < ApplicationController
   def show
     @title = 'Have you seen this Cow?'
     @cow = Cow.find(params[:id])
+    @attacks = Attack.where(cow_id: @cow.id)
 
-    @attacks = Attack.find(@cow.id)
   end
 
 
