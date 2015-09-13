@@ -75,7 +75,7 @@ header h2{
   background-repeat: no-repeat;
   height: 100px;
   width: 110px;
-  margin-left: 50px;
+
 }
 .cowShotImage{
   background-image: url('madShotCow.png');
@@ -97,6 +97,7 @@ header h2{
   border: solid black 5px;
   text-align: center;
   margin: 10px;
+  margin-left: 0;
   padding: 10px;
 
 }

@@ -22,7 +22,7 @@
 
     <div class='cowAttack'>
       <ul>
-        <li><h3>Incident ID: #<%= attack.id %></h3></li>
+        <li><h3>Incident ID: #<%= link_to attack.id, attack %></h3></li>
         <li>--------------------------------</li>
         <li>Location: <%= attack.location %></li>
         <li>Rating: <%= attack.rating %></li>

@@ -6,5 +6,10 @@ class AttackController < ApplicationController
 
   end
 
+  def show
+    @attack = Attack.find(params[:id])
+    @localAttacks = Attack.where(location: @attack.location)
+  end
+
 
 end

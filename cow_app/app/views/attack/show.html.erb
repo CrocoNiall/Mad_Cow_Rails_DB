@@ -1,0 +1,64 @@
+
+  <% person = Person.find(@attack.person_id) %>
+  <% cow = Cow.find(@attack.cow_id) %>
+  <div class='cowImage'></div>
+  <h2>Attack ID: #<%= @attack.id %></h2>
+  <div class='attack'>
+      <div class='attackCow attackElement'>
+      <h2>Attacker</h2>
+      <p>Cow ID: #<%= cow.id %></p>
+      <p>Name: <%= link_to cow.name, cow %></p>
+      <p>Age: <%= cow.age %></p>
+    </div>
+
+    <div class='attackDetails attackElement'>
+      <h2>Details</h2>
+      <p>Incident ID: #<%= @attack.id%></p>
+      <p>Location: <%= @attack.location %></p>
+      <p>Rating: <%= @attack.rating %></p>
+    </div>
+
+    <div class='attackPerson attackElement'>
+        
+        <h2>Victim</h2>
+        <p>Victim ID: #<%= person.id %></p>
+        <p>Name: <%= link_to person.name, cow %></p>
+        <p>Age: <%= person.age %></p>
+    </div>
+  </div>
+    <%= link_to 'Delete', @attack, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to 'Edit', edit_cow_path(@attack) %>
+
+  <h2>All Attacks in: <%= @attack.location %> </h2>
+  <% @localAttacks.each do |attack| %>
+
+  <% localPerson = Person.find(attack.person_id) %>
+  <% localCow = Cow.find(attack.cow_id) %>
+
+  <% person = Person.find(attack.person_id) %>
+  <% cow = Cow.find(attack.cow_id) %>
+  <div class='attack'>
+      <div class='attackCow attackElement'>
+      <h2>Attacker</h2>
+      <p>Cow ID: #<%= localCow.id %></p>
+      <p>Name: <%= link_to localCow.name, cow %></p>
+      <p>Age: <%= localCow.age %></p>
+    </div>
+
+    <div class='attackDetails attackElement'>
+      <h2>Details</h2>
+      <p>Incident ID: #<%= attack.id%></p>
+      <p>Location: <%= attack.location %></p>
+      <p>Rating: <%= attack.rating %></p>
+    </div>
+
+    <div class='attackPerson attackElement'>
+        
+        <h2>Victim</h2>
+        <p>Victim ID: #<%= localPerson.id %></p>
+        <p>Name: <%= link_to localPerson.name, cow %></p>
+        <p>Age: <%= localPerson.age %></p>
+    </div>
+  </div>
+
+  <% end %>
