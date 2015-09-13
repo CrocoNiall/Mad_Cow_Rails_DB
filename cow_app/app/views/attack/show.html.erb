@@ -27,7 +27,7 @@
     </div>
   </div>
     <%= link_to 'Delete', @attack, method: :delete, data: { confirm: "Are you sure?" } %>
-    <%= link_to 'Edit', edit_cow_path(@attack) %>
+    <%= link_to 'Edit', edit_attack_path(@attack) %>
 
   <h2>All Attacks in: <%= @attack.location %> </h2>
   <% @localAttacks.each do |attack| %>
