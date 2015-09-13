@@ -1,6 +1,7 @@
 <h2>Aproach these Cows with extreme caution!!!</h2>
 <%= link_to 'Add a Cow!', '/cow/new' %>
 
+<div id='cows'>
 <% @cows.each do |cow| %>
 
   <div class='cow'>
@@ -14,3 +15,4 @@
 
   </div>
 <% end %>
+</div>

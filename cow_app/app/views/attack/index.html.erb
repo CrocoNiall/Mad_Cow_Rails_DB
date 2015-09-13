@@ -1,0 +1,32 @@
+<h2>Report an attack</h2>
+<%= link_to 'Report', '/attack/new' %>
+
+
+<% @attacks.each do |attack| %>
+  <% person = Person.find(attack.person_id) %>
+  <% cow = Cow.find(attack.cow_id) %>
+
+  <div class='attack'>
+      <div class='attackCow attackElement'>
+      <h2>Attacker</h2>
+      <p>Cow ID: #<%= cow.id %></p>
+      <p>Name: <%= link_to cow.name, cow %></p>
+      <p>Age: <%= cow.age %></p>
+    </div>
+
+    <div class='attackDetails attackElement'>
+      <h2>Details</h2>
+      <p>Incident ID: #<%= link_to attack.id, attack%></p>
+      <p>Location: <%= attack.location %></p>
+      <p>Rating: <%= attack.rating %></p>
+    </div>
+
+    <div class='attackPerson attackElement'>
+        
+        <h2>Victim</h2>
+        <p>Victim ID: #<%= person.id %></p>
+        <p>Name: <%= link_to person.name, cow %></p>
+        <p>Age: <%= person.age %></p>
+</div>
+  </div>
+<% end %>

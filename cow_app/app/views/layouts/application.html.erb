@@ -10,8 +10,17 @@
 <body>
   <header>
 
-    <h1>Attack of The Mad Cows!!!</h1>
-    <h2>Kill Them Before They Kill You!!!</h2>
+    <h1>MadCow.com</h1>
+    <h2>The World's first Cow Attack Database</h2>
+    <h3>Kill Them Before They Kill You!!!</h3>
+    <nav>
+      <ul>
+        <li><%= link_to 'Killer Cows', '/cow' %></li>
+        <li><%= link_to 'Victims', '/person' %></li>
+        <li><%= link_to 'Report an attack', '/attacks' %></li>
+      </ul>
+    </nav>
+
   </header>
   <div id='main-container'>
     <%= yield %>
